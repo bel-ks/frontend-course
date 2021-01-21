@@ -1,0 +1,236 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  margin: 0;
+}
+
+.passport-header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+  height: 7vh;
+
+  border-bottom: solid 1px rgba(194, 194, 194, 1);
+
+  background: #ffffff;
+}
+
+.passport-header__title {
+  font-family: 'PT SansNarrow', sans-serif;
+  font-size: calc(28px + 0.5vh);
+  font-weight: normal;
+  text-align: center;
+}
+
+.passport-header__title:first-letter {
+  color: rgba(207, 35, 35, 1);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 25%;
+  height: 100%;
+
+  padding-top: 7vh;
+
+  background: rgba(200, 200, 200, 0.5);
+  box-shadow: 10px 14px 28px rgba(0, 0, 0, 0.25), 10px 10px 10px rgba(0, 0, 0, 0.22);
+
+  font-size: 2.5vh;
+  font-weight: bold;
+}
+
+.menu__title {
+  width: 90%;
+
+  margin-bottom: -3%;
+
+  font-size: calc(25px + 0.5vh);
+  font-weight: normal;
+}
+
+.menu__navigation {
+  width: 100%;
+}
+
+.menu__list {
+  margin-left: 0;
+  padding-left: 0;
+
+  list-style-type: none;
+}
+
+.menu__point {
+  padding: 3.5% 0 3.5% 8%;
+}
+
+.menu__link {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: calc(18px + 0.5vh);
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.menu__link:focus,
+.menu__point:hover {
+  background: rgba(170, 170, 170, 0.7);
+}
+
+main {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 75%;
+
+  padding-top: 7vh;
+  padding-left: 25%;
+
+  background: rgba(255, 255, 255, 0.7) url(images/background.jpg) repeat;
+  background-blend-mode: color;
+  background-size: contain;
+}
+
+.passport-point {
+  width: 90%;
+
+  margin: 3vh 0;
+  padding: 2vh 0;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+}
+
+.cat-data,
+.cat-vaccine,
+.cat-gallery,
+.back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cat-data__title,
+.cat-data__photo,
+.cat-data__info,
+.cat-vaccine__title,
+.cat-vaccine__list,
+.cat-gallery__title,
+.cat-gallery__gallery,
+.back__title,
+.back__input-comment,
+.back__input-email {
+  width: 80%;
+}
+
+.cat-data__title,
+.cat-vaccine__title,
+.cat-gallery__title,
+.back__title {
+  font-size: calc(18px + 0.5vh);
+  font-weight: normal;
+}
+
+.cat-data__info,
+.cat-vaccine__list-point {
+  color: rgba(0, 0, 0, 0.9);
+
+  font-size: calc(13px + 0.5vh);
+}
+
+.cat-data__photo,
+.cat-gallery__photo {
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.cat-data__photo {
+  height: 70%;
+}
+
+.cat-vaccine__list-point {
+  margin-bottom: 2vh;
+}
+
+.cat-gallery__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cat-gallery__photo {
+  width: 45%;
+  height: 45%;
+}
+
+.back__input-comment,
+.back__input-email {
+  margin-bottom: 2vh;
+}
+
+.back__input-comment {
+  height: 100px;
+}
+
+.back__submit-button {
+  width: 50%;
+  height: 3vh;
+
+  border: solid 1px rgba(194, 194, 194, 0.6);
+  border-radius: 5px;
+
+  background: rgba(200, 200, 200, 0.5);
+  cursor: pointer;
+}
+
+.back__submit-button:focus,
+.back__submit-button:hover {
+  background: rgba(200, 200, 200, 0.7);
+}
+
+.passport-footer {
+  z-index: 10;
+
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+
+  width: 100%;
+
+  border-top: solid 1px rgba(194, 194, 194, 1);
+
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 1.5vh;
+}
+
+.passport-footer__email,
+.passport-footer__company {
+  margin: 1vh 0 1vh 2vh;
+
+  font-style: normal;
+}

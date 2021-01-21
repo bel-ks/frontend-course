@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>05-delorean-dmc-12</title>
+    <link rel="stylesheet" href="./index.css">
+    <!-- Header fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Neucha|Sofia&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|
+          Special+Elite&display=swap"
+          rel="stylesheet">
+    <!-- News column fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap"
+          rel="stylesheet">
+    <!-- Animal column fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Amita|
+          Delius+Swash+Caps|Handlee|Patrick+Hand+SC&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|
+          Love+Ya+Like+A+Sister|Mirza|Pompiere&display=swap"
+          rel="stylesheet">
+    <!-- Quote column fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Kristi&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Emilys+Candy&display=swap"
+          rel="stylesheet">
+    <!-- Science column fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merienda|
+          Nanum+Brush+Script|Permanent+Marker&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Knewave|Oregano|Unkempt&display=swap"
+          rel="stylesheet">
+  </head>
+  <body>
+    <!-- Color theme -->
+    <input class="input-option input-light-theme"
+           name="theme"
+           type="radio"
+           id="light-theme"
+    >
+    <input class="input-option input-dark-theme"
+           name="theme"
+           type="radio"
+           id="dark-theme"
+    >
+    <input class="input-option input-old-theme"
+           name="theme"
+           type="radio"
+           id="old-theme"
+           checked
+    >
+    <!-- Font style -->
+    <input class="input-option input-old-style"
+           name="font-style"
+           type="radio"
+           id="old-style"
+           checked
+    >
+    <input class="input-option input-modern-style"
+           name="font-style"
+           type="radio"
+           id="modern-style"
+    >
+    <!-- Font size -->
+    <input class="input-option input-s-size"
+           name="font-size"
+           type="radio"
+           id="s-size"
+    >
+    <input class="input-option input-m-size"
+           name="font-size"
+           type="radio"
+           id="m-size"
+           checked
+    >
+    <input class="input-option input-l-size"
+           name="font-size"
+           type="radio"
+           id="l-size"
+    >
+    <header class="newspaper-header">
+      <section class="newspaper-header__settings">
+        <div class="newspaper-header__set-theme">
+          <p class="newspaper-header__set-theme-title">
+            Color theme
+          </p>
+          <div class="newspaper-header__themes">
+            <label class="newspaper-header__option newspaper-header__light-theme" for="light-theme">
+              Light
+            </label>
+            <label class="newspaper-header__option newspaper-header__dark-theme" for="dark-theme">
+              Dark
+            </label>
+            <label class="newspaper-header__option newspaper-header__old-theme" for="old-theme">
+              Old
+            </label>
+          </div>
+        </div>
+        <div class="newspaper-header__set-font">
+          <p class="newspaper-header__set-font-title">
+            Font
+          </p>
+          <div class="newspaper-header__font-styles">
+            <label class="newspaper-header__option newspaper-header__old-style" for="old-style">
+              Old
+            </label>
+            <label class="newspaper-header__option newspaper-header__modern-style"
+                   for="modern-style"
+            >
+              Modern
+            </label>
+          </div>
+        </div>
+        <div class="newspaper-header__set-font-size">
+          <p class="newspaper-header__set-font-size-title">
+            Font-size
+          </p>
+          <div class="newspaper-header__font-sizes">
+            <label class="newspaper-header__option newspaper-header__s-size" for="s-size">
+              Small
+            </label>
+            <label class="newspaper-header__option newspaper-header__m-size" for="m-size">
+              Medium
+            </label>
+            <label class="newspaper-header__option newspaper-header__l-size" for="l-size">
+              Large
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="newspaper-header__title-line">
+        <p class="newspaper-header__quote">
+          "All the News<br>
+          That's Fit to Print"
+        </p>
+        <h1 class="newspaper-header__title">
+          The New York Times.
+        </h1>
+        <div class="newspaper-header__weather">
+          <p class="newspaper-header__weather-title">
+            THE WEATHER
+          </p>
+          <p class="newspaper-header__forecast">
+            Local showers today: Tuesday,<br>
+            fair: fresh, shifting winds,<br>
+            becoming northwest
+          </p>
+        </div>
+      </section>
+      <section class="newspaper-header__info-line">
+        <span class="newspaper-header__edition">
+          VOL. LXIII...NO. 20,610
+        </span>
+        <span class="newspaper-header__location">
+          NEW YORK, MONDAY, JUNE 29, 2005.-EIGHTEEN PAGES.
+        </span>
+        <span class="newspaper-header__cost">
+          ONE CENT
+        </span>
+      </section>
+    </header>
+    <main>
+      <section class="column news-column">
+        <article class="news-column__long-news">
+          <h2 class="news-column__title">
+            Pizzagate part 2? Bill de Blasio
+            schooled on Twitter after calling
+            out Domino's for selling $30 pizzas
+            on New Year’s Eve
+          </h2>
+          <p class="news-column__info">
+            New York Mayor Bill de Blasio was
+            harshly panned online after accusing
+            the Domino's pizza chain of “exploiting”
+            New Yorkers with $30 pies on New Year’s
+            Eve, with netizens giving the city
+            manager a lesson in supply and demand.
+          </p>
+          <p class="news-column__info">
+            De Blasio called out the company in a
+            tweet on Wednesday, outraged about its
+            New Year’s Eve prices for those celebrating
+            the holiday in Times Square, and encouraging
+            New Yorkers to ditch the corporate
+            franchise for local eateries.
+          </p>
+          <p class="news-column__info">
+            “Jacking up your prices on people trying
+            to celebrate the holidays? Classy, Domino's,”
+            he said. “To the thousands who came to
+            Times Square last night to ring in 2020,
+            I’m sorry this corporate chain exploited
+            you – stick it to them by patronizing one
+            of our fantastic LOCAL pizzerias.”
+          </p>
+        </article>
+        <div class="news-column__short-news">
+          <h3 class="news-column__short">
+            Empire State Building Illuminated
+            Red in Honor of Red Ribbon Week
+          </h3>
+          <h3 class="news-column__short">
+            $500,000.00 in Forfeited United States
+            Currency Distributed to Federal, State
+            and Local Law Enforcement
+          </h3>
+          <h3 class="news-column__short">
+            Albany District Office Dedicated to
+            the Memory of New York State Police
+            Investigator Joseph T. Aversa
+          </h3>
+        </div>
+      </section>
+      <section class="column animal-column">
+        <img class="column__photo animal-column__guinea-photo"
+             src="images/guinea_pigs.jpg" alt="Guinea pigs"
+        >
+        <h2 class="animal-column__title">
+          GUINEA PIG
+        </h2>
+        <div class="animal-column__info">
+          The guinea pig, also known as cavy, is a
+          species of rodent belonging to the family
+          Caviidae and the genus Cavia. Despite their
+          common name, guinea pigs are not native to
+          Guinea, nor are they biologically related to
+          pigs, and the origin of the name is still
+          unclear. They originated in the Andes of
+          South America, and studies based on
+          biochemistry and hybridization suggest they
+          are domesticated descendants of a closely
+          related species of cavy such as C. tschudii,
+          and therefore do not exist naturally in the
+          wild. They were originally domesticated as
+          livestock, as a source of food, and continue to be.
+        </div>
+        <div class="animal-column__facts">
+          <h3 class="animal-column__facts-title">
+            Did you know...
+          </h3>
+          <p class="animal-column__fact">
+            Guinea pigs are not related to pigs,
+            but may have been called pigs for several
+            reasons. For example, they have a similar
+            squeal to a pig’s. They are also somewhat
+            built like a small pig, with a large head,
+            stout neck, and no real tail.
+          </p>
+        </div>
+      </section>
+      <section class="column quote-and-advice-column">
+        <h2 class="quote-and-advice-column__title">
+          QUOTES
+        </h2>
+        <p class="quote-and-advice-column__quote">
+          “You say freak, I say unique.”<br>
+          ― Christian Baloga
+        </p>
+        <p class="quote-and-advice-column__quote">
+          “You must try harder. It is not easy to
+            become sane.”
+          <br>
+          ― George Orwell, 1984
+        </p>
+        <p class="quote-and-advice-column__quote">
+          “I am weird, and you know what? That's OK.
+            So are most interesting people.”
+          <br>
+          ― Em Bailey, Shift
+        </p>
+        <p class="quote-and-advice-column__quote">
+          “The only really interesting thing is
+            what happens between two people in a room.”
+          <br>
+          ― Francis Bacon
+        </p>
+        <p class="quote-and-advice-column__quote">
+          “where is here, when is now??”<br>
+          ― D.J. MacHale, The Merchant of Death
+        </p>
+        <p class="quote-and-advice-column__quote">
+          “Is the deer crossing the road, or is the
+            road crossing the forest?”
+          <br>
+          ― Freequill
+        </p>
+        <p class="quote-and-advice-column__quote">
+          “When unbelievable things happen in life,
+            that’s where life becomes more interesting.”
+          <br>
+          ― Vivek Thangaswamy
+        </p>
+        <div class="quote-and-advice-column__advices">
+          <h2 class="quote-and-advice-column__advices-title">
+            Advices
+          </h2>
+          <div class="quote-and-advice-column__study-advice">
+            <p class="quote-and-advice-column__dream-advice">
+              If you fall asleep now, you will dream.
+              If you study now, you will live your dream.
+            </p>
+            <p class="quote-and-advice-column__what-advice">
+              Studying is not about time. It's about effort.
+            </p>
+          </div>
+          <p class="quote-and-advice-column__success-advice">
+            Not everyone can truly succeed in everything.
+            But success only comes with self-management
+            and determination.
+          </p>
+        </div>
+      </section>
+      <section class="column science-column">
+        <h2 class="science-column__title">
+          Fascinating Lesser-Known Science Facts
+        </h2>
+        <section class="science-column__facts">
+          <section class="science-column__left-column">
+            <img class="column__photo science-column__fulgurite-photo"
+                 src="images/fulgurite.jpg" alt="Fulgurite"
+            >
+            <p class="science-column__fact science-column__fulgurite-fact">
+              Fulgurite is the name for fossilized
+              lightning. They are natural hollow glass
+              tubes formed in quartzose sand, or silica,
+              or soil by lightning strikes and are
+              formed when lightning with a temperature
+              of at least 1,800 degrees Celsius
+              instantaneously melts silica on a
+              conductive surface and fuses grains
+              together. The image above is a fulgurite.
+            </p>
+            <p class="science-column__fact science-column__physics-fact">
+              When dropped on a very hard, rigid surface,
+              glass balls and steel balls will bounce
+              higher than rubber ones. The reason is
+              that rubber balls deform significantly on
+              impact, flattening onto the surface, and
+              then springing back. In the process of this
+              squashing, some energy is lost.
+            </p>
+          </section>
+          <section class="science-column__right-column">
+            <p class="science-column__fact science-column__sound-fact">
+              The cracking sound of a whip is actually
+              a sonic boom – this is because the tip of
+              the whip travels faster than the speed of
+              sound. The whip is the first man made
+              device capable of exceeding the sound
+              barrier.
+            </p>
+            <p class="science-column__fact science-column__iceberg-fact">
+              Most icebergs are salt-free water caused
+              by mainland glaciers. Some sea-water
+              icebergs do exist – they are green. When
+              an icebergs pics up sea-water, it can
+              create green stripes. Additionally, normal
+              water that freezes more rapidly in the
+              ‘berg can cause blue stripes. These are
+              quite stunning to see and the picture below
+              is a good example of this effect.
+            </p>
+            <img class="column__photo science-column__iceberg-photo"
+                 src="images/iceberg.jpg" alt="Iceberg"
+            >
+          </section>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

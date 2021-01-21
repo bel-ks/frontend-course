@@ -1,0 +1,755 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  margin: 0;
+}
+
+.newspaper-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 160px;
+}
+
+.newspaper-header__settings {
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+  height: 50px;
+  padding-top: 5px;
+
+  background: rgba(136, 173, 184, 0.3);
+}
+
+.newspaper-header__set-theme,
+.newspaper-header__set-font,
+.newspaper-header__set-font-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 20%;
+}
+
+.newspaper-header__set-theme-title,
+.newspaper-header__set-font-title,
+.newspaper-header__set-font-size-title {
+  width: 100%;
+  margin: 0;
+
+  border-bottom: solid 2px rgba(130, 130, 130, 0.7);
+
+  text-align: center;
+}
+
+.newspaper-header__themes,
+.newspaper-header__font-styles,
+.newspaper-header__font-sizes {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+  height: 100%;
+}
+
+.input-option {
+  display: none;
+}
+
+.newspaper-header__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 35%;
+  height: 80%;
+
+  cursor: pointer;
+}
+
+.newspaper-header__old-style,
+.newspaper-header__modern-style {
+  width: 50%;
+}
+
+.newspaper-header__option:hover {
+  background: rgba(136, 173, 184, 0.4);
+}
+
+.input-light-theme:checked ~ .newspaper-header .newspaper-header__light-theme,
+.input-dark-theme:checked ~ .newspaper-header .newspaper-header__dark-theme,
+.input-old-theme:checked ~ .newspaper-header .newspaper-header__old-theme,
+.input-old-style:checked ~ .newspaper-header .newspaper-header__old-style,
+.input-modern-style:checked ~ .newspaper-header .newspaper-header__modern-style,
+.input-s-size:checked ~ .newspaper-header .newspaper-header__s-size,
+.input-m-size:checked ~ .newspaper-header .newspaper-header__m-size,
+.input-l-size:checked ~ .newspaper-header .newspaper-header__l-size {
+  background: rgba(136, 173, 184, 0.6);
+}
+
+.newspaper-header__title-line,
+.newspaper-header__info-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newspaper-header__title-line {
+  width: 95%;
+  height: 80px;
+}
+
+.newspaper-header__quote,
+.newspaper-header__title,
+.newspaper-header__weather-title,
+.newspaper-header__forecast {
+  margin: 0;
+}
+
+.newspaper-header__quote {
+  font-size: 90%;
+}
+
+.newspaper-header__title {
+  font-size: 300%;
+}
+
+.newspaper-header__quote,
+.newspaper-header__weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 150px;
+  height: 80%;
+
+  text-align: center;
+}
+
+.newspaper-header__weather-title {
+  width: 100%;
+
+  font-size: 100%;
+}
+
+.newspaper-header__forecast {
+  width: 100%;
+
+  font-size: 80%;
+}
+
+.newspaper-header__info-line {
+  width: 100%;
+  height: 20px;
+
+  font-size: 70%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 99%;
+
+  text-align: center;
+}
+
+.news-column,
+.quote-and-advice-column {
+  width: 20%;
+}
+
+.animal-column,
+.science-column {
+  width: 30%;
+}
+
+.column__photo {
+  object-fit: cover;
+  opacity: 0.7;
+  vertical-align: top;
+}
+
+.news-column__long-news,
+.news-column__short-news {
+  width: 90%;
+}
+
+.news-column__info {
+  margin: 2% 0;
+}
+
+.animal-column__guinea-photo {
+  width: 90%;
+  height: 30vh;
+  margin-top: 2%;
+
+  border-radius: 15px;
+}
+
+.animal-column__title {
+  margin: 2% 0;
+}
+
+.animal-column__info {
+  width: 95%;
+  margin-bottom: 5%;
+}
+
+.animal-column__facts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 85%;
+}
+
+.animal-column__facts-title,
+.animal-column__fact,
+.quote-and-advice-column__title,
+.quote-and-advice-column__quote,
+.quote-and-advice-column__advices-title,
+.quote-and-advice-column__dream-advice,
+.quote-and-advice-column__success-advice {
+  margin: 0;
+}
+
+.animal-column__facts-title {
+  width: 95%;
+  margin: 2% 0;
+
+  text-align: left;
+}
+
+.animal-column__fact {
+  width: 90%;
+  margin: 2% 0;
+}
+
+.quote-and-advice-column__title {
+  width: 50%;
+  margin: 1% 0;
+}
+
+.quote-and-advice-column__quote {
+  width: 90%;
+}
+
+.quote-and-advice-column__advices {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 90%;
+}
+
+.quote-and-advice-column__advices-title {
+  width: 5%;
+  height: 96%;
+
+  padding: 0 2%;
+
+  word-wrap: break-word;
+}
+
+.quote-and-advice-column__study-advice,
+.quote-and-advice-column__success-advice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 43%;
+  height: 98%;
+}
+
+.quote-and-advice-column__dream-advice,
+.quote-and-advice-column__what-advice {
+  width: 90%;
+}
+
+.science-column__title {
+  margin: 2% 0;
+}
+
+.science-column__facts {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.science-column__left-column,
+.science-column__right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 50%;
+  height: 98%;
+}
+
+.science-column__fulgurite-photo,
+.science-column__iceberg-photo {
+  width: 90%;
+  height: 15vh;
+
+  border-radius: 50%;
+}
+
+.science-column__fulgurite-fact,
+.science-column__iceberg-fact {
+  width: 90%;
+}
+
+.science-column__physics-fact,
+.science-column__sound-fact {
+  width: 80%;
+
+  padding: 5%;
+}
+
+/* Light theme */
+.input-light-theme:checked ~ .newspaper-header,
+.input-light-theme:checked ~ main {
+  background: rgba(222, 222, 222, 0.4);
+  color: rgb(0, 0, 0);
+}
+
+.input-light-theme:checked ~ .newspaper-header .newspaper-header__settings {
+  border-bottom: solid 1px rgba(179, 197, 203, 0.3);
+}
+
+.input-light-theme:checked ~ .newspaper-header .newspaper-header__quote,
+.input-light-theme:checked ~ .newspaper-header .newspaper-header__weather,
+.input-light-theme:checked ~ main .animal-column__facts {
+  border: solid 2px rgba(0, 0, 0, 1);
+}
+
+.input-light-theme:checked ~ .newspaper-header .newspaper-header__info-line {
+  border-top: double 3px rgba(100, 100, 100, 1);
+  border-bottom: double 3px rgba(100, 100, 100, 1);
+}
+
+.input-light-theme:checked ~ main .column,
+.input-light-theme:checked ~ main .quote-and-advice-column__advices-title,
+.input-light-theme:checked ~ main .quote-and-advice-column__study-advice {
+  border-right: solid 1px rgba(100, 100, 100, 1);
+}
+
+.input-light-theme:checked ~ main .news-column__short {
+  border-top: solid 2px rgba(100, 100, 100, 1);
+}
+
+.input-light-theme:checked ~ main .quote-and-advice-column__title,
+.input-light-theme:checked ~ main .quote-and-advice-column__quote {
+  border-bottom: solid 2px rgba(100, 100, 100, 1);
+}
+
+.input-light-theme:checked ~ main .science-column__left-column {
+  border-right: double 4px rgba(100, 100, 100, 1);
+}
+
+.input-light-theme:checked ~ main .science-column__physics-fact {
+  border: dotted 2px rgba(0, 0, 0, 1);
+}
+
+.input-light-theme:checked ~ main .science-column__sound-fact {
+  border: dashed 2px rgba(0, 0, 0, 1);
+}
+
+/* Dark theme */
+.input-dark-theme:checked ~ .newspaper-header,
+.input-dark-theme:checked ~ main {
+  background: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-dark-theme:checked ~ .newspaper-header .newspaper-header__settings {
+  border-bottom: solid 1px rgba(111, 111, 111, 0.3);
+}
+
+.input-dark-theme:checked ~ .newspaper-header .newspaper-header__quote,
+.input-dark-theme:checked ~ .newspaper-header .newspaper-header__weather,
+.input-dark-theme:checked ~ main .animal-column__facts {
+  border: solid 2px rgba(255, 255, 255, 0.8);
+}
+
+.input-dark-theme:checked ~ .newspaper-header .newspaper-header__info-line {
+  border-top: double 3px rgba(255, 255, 255, 0.8);
+  border-bottom: double 3px rgba(255, 255, 255, 0.8);
+}
+
+.input-dark-theme:checked ~ main .column,
+.input-dark-theme:checked ~ main .quote-and-advice-column__advices-title,
+.input-dark-theme:checked ~ main .quote-and-advice-column__study-advice {
+  border-right: solid 1px rgba(255, 255, 255, 0.8);
+}
+
+.input-dark-theme:checked ~ main .news-column__short {
+  border-top: solid 2px rgba(255, 255, 255, 0.8);
+}
+
+.input-dark-theme:checked ~ main .quote-and-advice-column__title,
+.input-dark-theme:checked ~ main .quote-and-advice-column__quote {
+  border-bottom: solid 2px rgba(255, 255, 255, 0.8);
+}
+
+.input-dark-theme:checked ~ main .science-column__left-column {
+  border-right: double 4px rgba(255, 255, 255, 0.8);
+}
+
+.input-dark-theme:checked ~ main .science-column__physics-fact {
+  border: dotted 2px rgba(255, 255, 255, 0.8);
+}
+
+.input-dark-theme:checked ~ main .science-column__sound-fact {
+  border: dashed 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Old theme */
+.input-old-theme:checked ~ .newspaper-header,
+.input-old-theme:checked ~ main {
+  background: rgba(195, 172, 131, 0.8);
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.input-old-theme:checked ~ .newspaper-header .newspaper-header__settings {
+  border-bottom: solid 1px rgba(208, 197, 176, 0.3);
+}
+
+.input-old-theme:checked ~ .newspaper-header .newspaper-header__quote,
+.input-old-theme:checked ~ .newspaper-header .newspaper-header__weather,
+.input-old-theme:checked ~ main .animal-column__facts {
+  border: solid 2px rgba(100, 100, 100, 0.9);
+}
+
+.input-old-theme:checked ~ .newspaper-header .newspaper-header__info-line {
+  border-top: double 3px rgba(100, 100, 100, 0.9);
+  border-bottom: double 3px rgba(100, 100, 100, 0.9);
+}
+
+.input-old-theme:checked ~ main .column,
+.input-old-theme:checked ~ main .quote-and-advice-column__advices-title,
+.input-old-theme:checked ~ main .quote-and-advice-column__study-advice {
+  border-right: solid 1px rgba(100, 100, 100, 0.9);
+}
+
+.input-old-theme:checked ~ main .news-column__short {
+  border-top: solid 2px rgba(100, 100, 100, 0.9);
+}
+
+.input-old-theme:checked ~ main .quote-and-advice-column__title,
+.input-old-theme:checked ~ main .quote-and-advice-column__quote {
+  border-bottom: solid 2px rgba(100, 100, 100, 0.9);
+}
+
+.input-old-theme:checked ~ main .science-column__left-column {
+  border-right: double 4px rgba(100, 100, 100, 0.9);
+}
+
+.input-old-theme:checked ~ main .science-column__physics-fact {
+  border: dotted 2px rgba(100, 100, 100, 0.9);
+}
+
+.input-old-theme:checked ~ main .science-column__sound-fact {
+  border: dashed 2px rgba(100, 100, 100, 0.9);
+}
+
+/* Old style */
+.input-old-style:checked ~ .newspaper-header .newspaper-header__title-line {
+  font-family: 'Neucha', cursive;
+}
+
+.input-old-style:checked ~ .newspaper-header .newspaper-header__title {
+  font-family: 'Sofia', cursive;
+}
+
+.input-old-style:checked ~ main .news-column__title {
+  font-family: 'Sedgwick Ave', cursive;
+}
+
+.input-old-style:checked ~ main .animal-column__title,
+.input-old-style:checked ~ main .quote-and-advice-column__quote {
+  font-family: 'Amita', cursive;
+}
+
+.input-old-style:checked ~ main .animal-column__info {
+  font-family: 'Patrick Hand SC', cursive;
+}
+
+.input-old-style:checked ~ main .news-column__short,
+.input-old-style:checked ~ main .animal-column__facts-title,
+.input-old-style:checked ~ main .science-column__title {
+  font-family: 'Delius Swash Caps', cursive;
+}
+
+.input-old-style:checked ~ main .animal-column__fact,
+.input-old-style:checked ~ main .science-column__fulgurite-fact,
+.input-old-style:checked ~ main .quote-and-advice-column__success-advice {
+  font-family: 'Handlee', cursive;
+}
+
+.input-old-style:checked ~ main .quote-and-advice-column__title {
+  font-family: 'Kristi', cursive;
+}
+
+.input-old-style:checked ~ main .science-column__physics-fact,
+.input-old-style:checked ~ main .quote-and-advice-column__advices-title {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.input-old-style:checked ~ main .news-column__info,
+.input-old-style:checked ~ main .science-column__sound-fact {
+  font-family: 'Merienda', cursive;
+}
+
+.input-old-style:checked ~ main .quote-and-advice-column__study-advice,
+.input-old-style:checked ~ main .science-column__iceberg-fact {
+  font-family: 'Nanum Brush Script', cursive;
+}
+
+/* Modern style */
+.input-modern-style:checked ~ .newspaper-header .newspaper-header__title-line {
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+.input-modern-style:checked ~ .newspaper-header .newspaper-header__title {
+  font-family: 'Special Elite', cursive;
+}
+
+.input-modern-style:checked ~ main .news-column__title {
+  font-family: 'Lobster', cursive;
+}
+
+.input-modern-style:checked ~ main .animal-column__title,
+.input-modern-style:checked ~ main .quote-and-advice-column__quote {
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.input-modern-style:checked ~ main .animal-column__info {
+  font-family: 'Mirza', cursive;
+}
+
+.input-modern-style:checked ~ main .news-column__short,
+.input-modern-style:checked ~ main .animal-column__facts-title,
+.input-modern-style:checked ~ main .science-column__title {
+  font-family: 'Chelsea Market', cursive;
+}
+
+.input-modern-style:checked ~ main .animal-column__fact,
+.input-modern-style:checked ~ main .science-column__fulgurite-fact,
+.input-modern-style:checked ~ main .quote-and-advice-column__success-advice {
+  font-family: 'Pompiere', cursive;
+}
+
+.input-modern-style:checked ~ main .quote-and-advice-column__title {
+  font-family: 'Emilys Candy', cursive;
+}
+
+.input-modern-style:checked ~ main .science-column__physics-fact,
+.input-modern-style:checked ~ main .quote-and-advice-column__advices-title {
+  font-family: 'Knewave', cursive;
+}
+
+.input-modern-style:checked ~ main .news-column__info,
+.input-modern-style:checked ~ main .science-column__sound-fact {
+  font-family: 'Unkempt', cursive;
+}
+
+.input-modern-style:checked ~ main .quote-and-advice-column__study-advice,
+.input-modern-style:checked ~ main .science-column__iceberg-fact {
+  font-family: 'Oregano', cursive;
+}
+
+/* S-size */
+.input-s-size:checked ~ main .news-column__title {
+  font-size: 100%;
+}
+
+.input-s-size:checked ~ main .news-column__info {
+  font-size: 65%;
+}
+
+.input-s-size:checked ~ main .news-column__short {
+  font-size: 70%;
+}
+
+.input-s-size:checked ~ main .animal-column__title {
+  font-size: 120%;
+}
+
+.input-s-size:checked ~ main .animal-column__info {
+  font-size: 90%;
+}
+
+.input-s-size:checked ~ main .animal-column__facts-title {
+  font-size: 105%;
+}
+
+.input-s-size:checked ~ main .animal-column__facts {
+  font-size: 95%;
+}
+
+.input-s-size:checked ~ main .quote-and-advice-column__title {
+  font-size: 170%;
+}
+
+.input-s-size:checked ~ main .quote-and-advice-column__quote {
+  font-size: 70%;
+}
+
+.input-s-size:checked ~ main .quote-and-advice-column__advices-title {
+  font-size: 115%;
+}
+
+.input-s-size:checked ~ main .quote-and-advice-column__study-advice {
+  font-size: 70%;
+}
+
+.input-s-size:checked ~ main .quote-and-advice-column__success-advice {
+  font-size: 80%;
+}
+
+.input-s-size:checked ~ main .science-column__title {
+  font-size: 140%;
+}
+
+.input-s-size:checked ~ main .science-column__fact {
+  font-size: 80%;
+}
+
+/* M-size */
+.input-m-size:checked ~ main .news-column__title {
+  font-size: 130%;
+}
+
+.input-m-size:checked ~ main .news-column__info {
+  font-size: 95%;
+}
+
+.input-m-size:checked ~ main .news-column__short {
+  font-size: 100%;
+}
+
+.input-m-size:checked ~ main .animal-column__title {
+  font-size: 150%;
+}
+
+.input-m-size:checked ~ main .animal-column__info {
+  font-size: 120%;
+}
+
+.input-m-size:checked ~ main .animal-column__facts-title {
+  font-size: 135%;
+}
+
+.input-m-size:checked ~ main .animal-column__facts {
+  font-size: 125%;
+}
+
+.input-m-size:checked ~ main .quote-and-advice-column__title {
+  font-size: 200%;
+}
+
+.input-m-size:checked ~ main .quote-and-advice-column__quote {
+  font-size: 100%;
+}
+
+.input-m-size:checked ~ main .quote-and-advice-column__advices-title {
+  font-size: 145%;
+}
+
+.input-m-size:checked ~ main .quote-and-advice-column__study-advice {
+  font-size: 100%;
+}
+
+.input-m-size:checked ~ main .quote-and-advice-column__success-advice {
+  font-size: 110%;
+}
+
+.input-m-size:checked ~ main .science-column__title {
+  font-size: 170%;
+}
+
+.input-m-size:checked ~ main .science-column__fact {
+  font-size: 110%;
+}
+
+/* L-size */
+.input-l-size:checked ~ main .news-column__title {
+  font-size: 160%;
+}
+
+.input-l-size:checked ~ main .news-column__info {
+  font-size: 125%;
+}
+
+.input-l-size:checked ~ main .news-column__short {
+  font-size: 130%;
+}
+
+.input-l-size:checked ~ main .animal-column__title {
+  font-size: 180%;
+}
+
+.input-l-size:checked ~ main .animal-column__info {
+  font-size: 150%;
+}
+
+.input-l-size:checked ~ main .animal-column__facts-title {
+  font-size: 165%;
+}
+
+.input-l-size:checked ~ main .animal-column__facts {
+  font-size: 155%;
+}
+
+.input-l-size:checked ~ main .quote-and-advice-column__title {
+  font-size: 230%;
+}
+
+.input-l-size:checked ~ main .quote-and-advice-column__quote {
+  font-size: 130%;
+}
+
+.input-l-size:checked ~ main .quote-and-advice-column__advices-title {
+  font-size: 175%;
+}
+
+.input-l-size:checked ~ main .quote-and-advice-column__study-advice {
+  font-size: 130%;
+}
+
+.input-l-size:checked ~ main .quote-and-advice-column__success-advice {
+  font-size: 140%;
+}
+
+.input-l-size:checked ~ main .science-column__title {
+  font-size: 200%;
+}
+
+.input-l-size:checked ~ main .science-column__fact {
+  font-size: 140%;
+}

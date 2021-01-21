@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Задача «Котограм»</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <svg class="sprites">
+      <defs>
+        <linearGradient id="gradient" x1="0%" x2="100%" y1="100%" y2="0%">
+          <stop offset="0%" stop-color="#fa6200"/>
+          <stop offset="50%" stop-color="#ea0058"/>
+          <stop offset="100%" stop-color="#9c0085"/>
+        </linearGradient>
+      </defs>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-pic">
+        <path d="M.5 7.401L24.428 31.33 48.357 7.4 41.569.613
+                 l-17.14 17.14L7.288.614z"
+              fill-rule="evenodd"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="fill-pic">
+        <path d="M8.395 8.395h30.996v30.996H8.395z"/>
+        <path d="M35.946 0v5.166h6.888v6.673H48V0z
+                 M5.166 5.166h6.673V0H0v11.839h5.166z
+                 M42.834 42.834h-6.888V48H48V35.946h-5.166z
+                 M5.166 35.946H0V48h11.839v-5.166H5.166z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="flip-pic">
+        <path d="M0 29.9l19.084-11.788L0 6.325z"/>
+        <path d="M28.916 18.112L48 29.9V6.325L28.916 18.112z
+                 m15.058 4.425l-7.163-4.425 7.163-4.424v8.849z"
+              fill-rule="nonzero"/>
+        <path d="M21.398 8.05h5.205v5.175h-5.205z
+                 M21.398 0h5.205v5.175h-5.205z
+                 M21.398 16.1h5.205v5.175h-5.205z
+                 M21.398 23.575h5.205v5.175h-5.205z
+                 M21.398 31.625h5.205V36.8h-5.205z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="logo-pic">
+        <path d="M0 0v48h48V0H0z
+                 m24.107 16.782a7.12 7.12 0 0 1 7.11 7.111 7.12
+                 7.12 0 0 1-7.11 7.111 7.12 7.12 0 0 1-7.111-7.11 7.12 7.12 0 0 1 7.11-7.112z
+                 M6.4 5.547h7.253v4.693H6.4V5.547z
+                 M41.6 41.6H6.4V24.747h4.225c.443 7.053 6.318
+                 12.657 13.482 12.657 7.163 0 13.039-5.604 13.481-12.657H41.6V41.6z"
+              fill="url(#gradient)"
+              fill-rule="evenodd"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="rotate-pic">
+        <path d="M24 48c13.234 0 24-9.765 24-21.753 0-11.99-10.766-21.749-24-21.749-.88
+                 0-1.768.046-2.651.136V1.119c0-.452-.308-.863-.761-1.038a1.353 1.353 0 0
+                 0-1.355.251l-8.504 7.722c-.484.438-.484 1.138 0 1.583l8.5 7.739
+                 c.362.319.886.418 1.359.243.453-.177.76-.585.76-1.035v-3.899c.88-.146
+                 1.764-.212 2.651-.212 8.384 0 15.207 6.18 15.207 13.774 0 7.593-6.825
+                 13.778-15.207 13.778-8.382 0-15.203-6.187-15.203-13.778 0-.616-.553-1.12-1.24-1.12
+                 H1.24c-.684 0-1.241.504-1.241 1.12C0 38.235 10.774 48 24 48z"
+              fill-rule="evenodd"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="scale-pic">
+        <path d="M0 0v48h48V0H0z
+                 m6.4 6.4h33.682L6.4 40.227V6.4z
+                 m34.56 32.427H25.6v-6.4h15.36v6.4z"
+              fill-rule="nonzero"/>
+        <path d="M24 13.071h-4.375v-4.5h-6.25v4.5H9V19.5h4.375V24h6.25v-4.5H24z"/>
+      </symbol>
+    </svg>
+
+    <main>
+      <input class="fill-action" type="checkbox" id="fill">
+
+      <input class="no-scale" name="scale" type="radio" id="no-scale" checked>
+      <input class="scale-smaller" name="scale" type="radio" id="smaller">
+      <input class="scale-smallest" name="scale" type="radio" id="smallest">
+
+      <input class="show-logo" type="checkbox" id="logo">
+
+      <input class="no-rotate" name="rotate" type="radio" id="no-rotate" checked>
+      <input class="one-rotate" name="rotate" type="radio" id="one">
+      <input class="two-rotate" name="rotate" type="radio" id="two">
+      <input class="three-rotate" name="rotate" type="radio" id="three">
+
+      <input class="flip-action" type="checkbox" id="flip">
+
+      <input class="input-no-left" name="arrows" type="radio" id="no-left" checked>
+      <input class="input-one-left" name="arrows" type="radio" id="one-left">
+      <input class="input-two-left" name="arrows" type="radio" id="two-left">
+
+      <input class="input-orig" name="filter" type="radio" id="orig" checked>
+      <input class="input-spb" name="filter" type="radio" id="spb">
+      <input class="input-yalta" name="filter" type="radio" id="yalta">
+      <input class="input-ural" name="filter" type="radio" id="ural">
+      <input class="input-grass" name="filter" type="radio" id="grass">
+      <input class="input-bloody" name="filter" type="radio" id="bloody">
+
+      <section class="actions">
+        <label class="action actions__fill" for="fill">
+          <svg>
+            <use xlink:href="#fill-pic"/>
+          </svg>
+        </label>
+
+        <label class="action actions__no-scale" for="no-scale">
+          <svg>
+            <use xlink:href="#scale-pic"/>
+          </svg>
+        </label>
+        <label class="action actions__smaller" for="smaller">
+          <svg>
+            <use xlink:href="#scale-pic"/>
+          </svg>
+        </label>
+        <label class="action actions__smallest" for="smallest">
+          <svg>
+            <use xlink:href="#scale-pic"/>
+          </svg>
+        </label>
+
+        <label class="action actions__logo" for="logo">
+          <svg>
+            <use xlink:href="#logo-pic"/>
+          </svg>
+        </label>
+
+        <label class="action actions__no-rotate" for="no-rotate">
+          <svg>
+            <use xlink:href="#rotate-pic"/>
+          </svg>
+        </label>
+        <label class="action actions__one-rotate" for="one">
+          <svg>
+            <use xlink:href="#rotate-pic"/>
+          </svg>
+        </label>
+        <label class="action actions__two-rotate" for="two">
+          <svg>
+            <use xlink:href="#rotate-pic"/>
+          </svg>
+        </label>
+        <label class="action actions__three-rotate" for="three">
+          <svg>
+            <use xlink:href="#rotate-pic"/>
+          </svg>
+        </label>
+
+        <label class="action actions__flip" for="flip">
+          <svg>
+            <use xlink:href="#flip-pic"/>
+          </svg>
+        </label>
+      </section>
+
+      <img class="cat-photo" src="pushok.png" alt="Cat">
+
+      <section class="filters-section">
+        <label class="left-arrow filters-section__no-left-arrow" for="two-left">
+          <svg>
+            <use xlink:href="#arrow-pic"/>
+          </svg>
+        </label>
+        <label class="left-arrow filters-section__one-left-arrow" for="no-left">
+          <svg>
+            <use xlink:href="#arrow-pic"/>
+          </svg>
+        </label>
+        <label class="left-arrow filters-section__two-left-arrow" for="one-left">
+          <svg>
+            <use xlink:href="#arrow-pic"/>
+          </svg>
+        </label>
+        <div class="filters-section__filters">
+          <div class="filter filters-section__orig">
+            <span class="title filter__orig-title">
+              Без фильтра
+            </span>
+            <label class="filter__orig" for="orig">
+              <img class="example filter__orig-photo" src="small_pushok.png" alt="Без фильтра">
+            </label>
+          </div>
+          <div class="filter filters-section__spb">
+            <span class="title filter__spb-title">
+              Питер
+            </span>
+            <label class="filter__spb" for="spb">
+              <img class="example filter__spb-photo" src="small_pushok.png" alt="Питер">
+            </label>
+          </div>
+          <div class="filter filters-section__yalta">
+            <span class="title filter__yalta-title">
+              Ялта
+            </span>
+            <label class="filter__yalta" for="yalta">
+              <img class="example filter__yalta-photo" src="small_pushok.png" alt="Ялта">
+            </label>
+          </div>
+          <div class="filter filters-section__ural">
+            <span class="title filter__ural-title">
+              Уральское лето
+            </span>
+            <label class="filter__ural" for="ural">
+              <img class="example filter__ural-photo" src="small_pushok.png" alt="Уральское лето">
+            </label>
+          </div>
+          <div class="filter filters-section__grass">
+            <span class="title filter__grass-title">
+              Травяная свежесть
+            </span>
+            <label class="filter__grass" for="grass">
+              <img class="example filter__grass-photo" src="small_pushok.png"
+                   alt="Травяная свежесть">
+            </label>
+          </div>
+          <div class="filter filters-section__bloody">
+            <span class="title filter__bloody-title">
+              Кровавокрасный
+            </span>
+            <label class="filter__bloody" for="bloody">
+              <img class="example filter__bloody-photo" src="small_pushok.png" alt="Кровавокрасный">
+            </label>
+          </div>
+        </div>
+        <label class="right-arrow filters-section__two-right-arrow" for="one-left">
+          <svg>
+            <use xlink:href="#arrow-pic"/>
+          </svg>
+        </label>
+        <label class="right-arrow filters-section__one-right-arrow" for="two-left">
+          <svg>
+            <use xlink:href="#arrow-pic"/>
+          </svg>
+        </label>
+        <label class="right-arrow filters-section__no-right-arrow" for="no-left">
+          <svg>
+            <use xlink:href="#arrow-pic"/>
+          </svg>
+        </label>
+      </section>
+    </main>
+  </body>
+</html>

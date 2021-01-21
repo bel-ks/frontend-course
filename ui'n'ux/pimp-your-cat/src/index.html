@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>03-pimp-your-cat</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <input class="close-button" type="checkbox" id="close">
+    <form class="cat-form">
+      <div class="cat-form__content">
+        <h1 class="cat-form__header">
+          Прокачай кота!
+        </h1>
+        <p class="cat-form__text">
+          Подпишись на рассылку нашего тренера<br>
+          и получи идивидуальную подобранную<br>
+          программу тренировок для своего кота
+        </p>
+        <div class="cat-form__cat-info">
+          Кот
+          <input class="cat-form__input-age" type="number" id="age" placeholder="2">
+          <label class="cat-form__age" for="age">
+            лет
+          </label>
+          и
+          <input class="cat-form__input-weight" type="number" id="weight" placeholder="5">
+          <label class="cat-form__weight" for="weight">
+            кг
+          </label>
+        </div>
+        <div class="cat-form__program">
+          <input class="cat-form__input-more" name="program" type="radio" id="pr1">
+          <label class="cat-form__more" for="pr1">
+            Набор массы
+          </label>
+          <input class="cat-form__input-less" name="program" type="radio" id="pr2">
+          <label class="cat-form__less" for="pr2">
+            Похудение
+          </label>
+          <input class="cat-form__input-idk" name="program" type="radio" id="pr3" checked>
+          <label class="cat-form__idk" for="pr3">
+            Не знаю
+          </label>
+        </div>
+        <input class="cat-form__input-email" type="email" id="email" placeholder="Email (ваш)"
+               required="required">
+        <label class="cat-form__email-field" for="email">
+        </label>
+        <div class="cat-form__want-spam">
+          <input class="cat-form__input-spam" type="checkbox" id="spam">
+          <label class="cat-form__spam" for="spam">
+            Хочу спам
+          </label>
+        </div>
+        <input class="cat-form__submit-button" type="submit" id="submit" value="Подписаться">
+        <label class="cat-form__submit" for="submit"></label>
+      </div>
+      <div class="cat-form__photo">
+        <div class="cat-form__top-rectangle"></div>
+        <img class="cat-form__cat-photo" src="images/cat_photo.png" alt="cat">
+        <div class="cat-form__bottom-rectangle"></div>
+      </div>
+      <label class="cat-form__close-icon" for="close">
+      </label>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,318 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 700px;
+  height: 100%;
+}
+
+.sprites {
+  position: fixed;
+
+  visibility: hidden;
+}
+
+input {
+  display: none;
+}
+
+svg {
+  width: 50px;
+  height: 50px;
+
+  opacity: 0.5;
+}
+
+.cat-photo {
+  width: 650px;
+  height: 444px;
+
+  transition: 1s;
+}
+
+.filters-section,
+.filters-section__filters {
+  display: flex;
+  align-items: center;
+
+  width: 700px;
+  height: 165px;
+}
+
+.filters-section__filters {
+  justify-content: space-around;
+
+  width: 600px;
+}
+
+.left-arrow,
+.right-arrow {
+  display: none;
+
+  width: 50px;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 150px;
+  height: 165px;
+}
+
+.title {
+  width: 100%;
+  height: 15px;
+
+  padding: 2.5px 0;
+
+  font-size: 12px;
+  text-align: center;
+}
+
+.input-orig:checked ~ .filters-section .filter__orig-title,
+.input-spb:checked ~ .filters-section .filter__spb-title,
+.input-yalta:checked ~ .filters-section .filter__yalta-title,
+.input-ural:checked ~ .filters-section .filter__ural-title,
+.input-grass:checked ~ .filters-section .filter__grass-title,
+.input-bloody:checked ~ .filters-section .filter__bloody-title {
+  font-weight: bold;
+}
+
+.example {
+  width: 145px;
+  height: 145px;
+
+  cursor: pointer;
+
+  object-fit: cover;
+}
+
+@keyframes spb-filter {
+  to {
+    filter: grayscale(100%);
+  }
+}
+
+.filter__spb-photo,
+.input-spb:checked ~ .cat-photo {
+  animation: spb-filter 1s linear forwards;
+}
+
+@keyframes yalta-filter {
+  to {
+    filter: sepia(100%);
+  }
+}
+
+.filter__yalta-photo,
+.input-yalta:checked ~ .cat-photo {
+  animation: yalta-filter 1s linear forwards;
+}
+
+@keyframes ural-filter {
+  to {
+    filter: hue-rotate(180deg);
+  }
+}
+
+.filter__ural-photo,
+.input-ural:checked ~ .cat-photo {
+  animation: ural-filter 1s linear forwards;
+}
+
+@keyframes grass-filter {
+  to {
+    filter: hue-rotate(120deg);
+  }
+}
+
+.filter__grass-photo,
+.input-grass:checked ~ .cat-photo {
+  animation: grass-filter 1s linear forwards;
+}
+
+@keyframes bloody-filter {
+  to {
+    filter: hue-rotate(300deg);
+  }
+}
+
+.filter__bloody-photo,
+.input-bloody:checked ~ .cat-photo {
+  animation: bloody-filter 1s linear forwards;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 650px;
+  height: 150px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 130px;
+  height: 150px;
+
+  cursor: pointer;
+}
+
+.left-arrow svg {
+  transform: rotate(90deg);
+
+  opacity: 1;
+}
+
+.right-arrow svg {
+  transform: rotate(-90deg);
+
+  opacity: 1;
+}
+
+.actions__fill:hover > svg,
+.actions__no-scale:hover > svg,
+.actions__smaller:hover > svg,
+.actions__smallest:hover > svg,
+.actions__logo:hover > svg,
+.actions__no-rotate:hover > svg,
+.actions__one-rotate:hover > svg,
+.actions__two-rotate:hover > svg,
+.actions__three-rotate:hover > svg,
+.actions__flip:hover > svg {
+  opacity: 1;
+}
+
+.fill-action:checked ~ .cat-photo {
+  width: 444px;
+  height: 444px;
+
+  object-fit: cover;
+}
+
+.no-scale:checked ~ .actions .actions__no-scale,
+.no-scale:checked ~ .actions .actions__smallest,
+.scale-smaller:checked ~ .actions .actions__no-scale,
+.scale-smaller:checked ~ .actions .actions__smaller,
+.scale-smallest:checked ~ .actions .actions__smaller,
+.scale-smallest:checked ~ .actions .actions__smallest {
+  display: none;
+}
+
+.no-scale:checked ~ .cat-photo {
+  transform: scale(1);
+}
+
+.scale-smaller:checked ~ .cat-photo {
+  transform: scale(0.75);
+}
+
+.scale-smallest:checked ~ .cat-photo {
+  transform: scale(0.5);
+}
+
+.show-logo:checked ~ .actions .actions__fill,
+.show-logo:checked ~ .actions .actions__no-scale,
+.show-logo:checked ~ .actions .actions__smaller,
+.show-logo:checked ~ .actions .actions__smallest,
+.show-logo:checked ~ .actions .actions__no-rotate,
+.show-logo:checked ~ .actions .actions__one-rotate,
+.show-logo:checked ~ .actions .actions__two-rotate,
+.show-logo:checked ~ .actions .actions__three-rotate,
+.show-logo:checked ~ .actions .actions__flip,
+.show-logo:checked ~ .filters-section {
+  visibility: hidden;
+}
+
+.show-logo:checked ~ .actions .actions__logo > svg {
+  opacity: 1;
+}
+
+.show-logo:checked ~ .cat-photo {
+  animation: none;
+}
+
+.no-rotate:checked ~ .actions .actions__no-rotate,
+.no-rotate:checked ~ .actions .actions__two-rotate,
+.no-rotate:checked ~ .actions .actions__three-rotate,
+.one-rotate:checked ~ .actions .actions__no-rotate,
+.one-rotate:checked ~ .actions .actions__one-rotate,
+.one-rotate:checked ~ .actions .actions__three-rotate,
+.two-rotate:checked ~ .actions .actions__no-rotate,
+.two-rotate:checked ~ .actions .actions__one-rotate,
+.two-rotate:checked ~ .actions .actions__two-rotate,
+.three-rotate:checked ~ .actions .actions__one-rotate,
+.three-rotate:checked ~ .actions .actions__two-rotate,
+.three-rotate:checked ~ .actions .actions__three-rotate {
+  display: none;
+}
+
+.one-rotate:checked ~ .cat-photo {
+  transform: rotate(-90deg) scale(0.8);
+}
+
+.two-rotate:checked ~ .cat-photo {
+  transform: rotate(-180deg);
+}
+
+.three-rotate:checked ~ .cat-photo {
+  transform: rotate(-270deg) scale(0.8);
+}
+
+.flip-action:checked ~ .cat-photo {
+  transform: scaleX(-1);
+}
+
+.filters-section__no-left-arrow,
+.filters-section__no-right-arrow {
+  opacity: 0.5;
+
+  pointer-events: none;
+}
+
+.input-no-left:checked ~ .filters-section .filters-section__no-left-arrow,
+.input-no-left:checked ~ .filters-section .filters-section__two-right-arrow,
+.input-one-left:checked ~ .filters-section .filters-section__one-left-arrow,
+.input-one-left:checked ~ .filters-section .filters-section__one-right-arrow,
+.input-two-left:checked ~ .filters-section .filters-section__two-left-arrow,
+.input-two-left:checked ~ .filters-section .filters-section__no-right-arrow {
+  display: initial;
+}
+
+.input-no-left:checked ~ .filters-section .filters-section__grass,
+.input-no-left:checked ~ .filters-section .filters-section__bloody {
+  display: none;
+}
+
+.input-one-left:checked ~ .filters-section .filters-section__orig,
+.input-one-left:checked ~ .filters-section .filters-section__bloody {
+  display: none;
+}
+
+.input-two-left:checked ~ .filters-section .filters-section__orig,
+.input-two-left:checked ~ .filters-section .filters-section__spb {
+  display: none;
+}

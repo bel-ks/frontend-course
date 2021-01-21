@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>02-cats-for-all</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap"
+          rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Мурмаркет
+      </h1>
+    </header>
+    <main>
+      <input name="option" id="all" type="radio" checked>
+      <input name="option" id="fluffy_tail" type="radio">
+      <input name="option" id="sphinx" type="radio">
+      <input name="option" id="sadness" type="radio">
+      <input name="option" id="mau" type="radio">
+      <aside class="filters">
+        <label class="age" for="age-range">
+          <span>
+            Возраст
+          </span>
+          <input id="age-range" type="range" min="0" max="2" step="0.5">
+        </label>
+        <form class="breed">
+          <p>
+            Порода
+          </p>
+          <label class="label_all" for="all">
+            Все
+          </label>
+          <label class="label_ft" for="fluffy_tail">
+            Пушистохвост
+          </label>
+          <label class="label_sph" for="sphinx">
+            Сфинкс
+          </label>
+          <label class="label_sad" for="sadness">
+            Грустинка
+          </label>
+          <label class="label_mau" for="mau">
+            Мау?
+          </label>
+        </form>
+      </aside>
+      <div class="cats">
+        <article id="1" class="cat-info pou">
+          <div class="description-container">
+            <img src="images/cats_images/pou.jpg" alt="Cat Pou">
+            <div class="short-description">
+              <h2 class="cat-name">
+                <a href="#1">
+                  Поу
+                </a>
+              </h2>
+              <p>
+                5 месяцев<br>
+                Грустинка<br>
+                Ищет хозяина
+              </p>
+            </div>
+          </div>
+          <p class="full-description">
+            Маленький непоседа.<br>
+            Любит, когда его берут на ручки.
+          </p>
+        </article>
+        <article id="2" class="cat-info lora">
+          <div class="description-container">
+            <img src="images/cats_images/lora.jpg" alt="Cat Lora">
+            <div class="short-description">
+              <h2 class="cat-name">
+                <a href="#2">
+                  Лора
+                </a>
+              </h2>
+              <p>
+                1 год<br>
+                Пушистохвост<br>
+                Ищет хозяина
+              </p>
+            </div>
+          </div>
+          <p class="full-description">
+            Вы только посмотрите на неё!<br>
+            100% милоты.
+          </p>
+        </article>
+        <article id="3" class="cat-info kot">
+          <div class="description-container">
+            <img src="images/cats_images/kot.jpg" alt="Cat Kot">
+            <div class="short-description">
+              <h2 class="cat-name">
+                <a href="#3">
+                  Кот
+                </a>
+              </h2>
+              <p>
+                2 года<br>
+                Сфинкс<br>
+                Ищет хозяина
+              </p>
+            </div>
+          </div>
+          <p class="full-description">
+            Кот. Просто кот.<br>
+            (Осторожно: может очаровать огромными глазами)
+          </p>
+        </article>
+        <article id="4" class="cat-info murka">
+          <div class="description-container">
+            <img src="images/cats_images/murka.jpg" alt="Cat Murka">
+            <div class="short-description">
+              <h2 class="cat-name">
+                <a href="#4">
+                  Мурка
+                </a>
+              </h2>
+              <p>
+                1,2 года<br>
+                Мау?<br>
+                Ищет хозяина
+              </p>
+            </div>
+          </div>
+          <p class="full-description">
+            Модница.<br>
+            Любит шляпки и полежать на уютной полке.
+          </p>
+        </article>
+        <article id="5" class="cat-info semyon">
+          <div class="description-container">
+            <img src="images/cats_images/semyon.jpg" alt="Cat Semyon">
+            <div class="short-description">
+              <h2 class="cat-name">
+                <a href="#5">
+                  Семён
+                </a>
+              </h2>
+              <p>
+                5 месяцев<br>
+                Пушистохвост<br>
+                Ищет хозяина
+              </p>
+            </div>
+          </div>
+          <p class="full-description">
+            Обещает стать большим и грозным котом.<br>
+            Очень любит активные игры.
+          </p>
+        </article>
+        <article id="6" class="cat-info future">
+          <div class="description-container">
+            <img src="images/cats_images/future.jpg" alt="Cat Future">
+            <div class="short-description">
+              <h2 class="cat-name">
+                <a href="#6">
+                  Фьючер
+                </a>
+              </h2>
+              <p>
+                1 год<br>
+                Грустинка<br>
+                Ищет хозяина
+              </p>
+            </div>
+          </div>
+          <p class="full-description">
+            Очень ждёт своего хозяина, чтобы понять свою жизненную цель.
+          </p>
+        </article>
+        <article id="7" class="cat-info pushok">
+          <div class="description-container">
+            <img src="images/cats_images/pushok.jpg" alt="Cat Pushok">
+            <div class="short-description">
+              <h2 class="cat-name">
+                <a href="#7">
+                  Пушок
+                </a>
+              </h2>
+              <p>
+                1 год<br>
+                Пушистохвост<br>
+                Ищет хозяина
+              </p>
+            </div>
+          </div>
+          <p class="full-description">
+            Маленькое облачко.<br>
+            Очень любит свою подушку.
+          </p>
+        </article>
+        <article id="8" class="cat-info barsik">
+          <div class="description-container">
+            <img src="images/cats_images/barsik.jpg" alt="Cat Barsik">
+            <div class="short-description">
+              <h2 class="cat-name">
+                <a href="#7">
+                  Барсик
+                </a>
+              </h2>
+              <p>
+                7 месяцев<br>
+                Мау?<br>
+                Ищет хозяина
+              </p>
+            </div>
+          </div>
+          <p class="full-description">
+            Любит бегать по ночам.<br>
+            Успокаивается, если почесать за ушком.
+          </p>
+        </article>
+        <article id="9" class="cat-info tma">
+          <div class="description-container">
+            <img src="images/cats_images/tma.jpg" alt="Cat Tma">
+            <div class="short-description">
+              <h2 class="cat-name">
+                <a href="#9">
+                  Тьма
+                </a>
+              </h2>
+              <p>
+                2 года<br>
+                Пушистохвост<br>
+                Ищет хозяина
+              </p>
+            </div>
+          </div>
+          <p class="full-description">
+            Осторожно, поглощает всё, что движется.<br>
+            Что не двигается - двигает и поглощает.
+          </p>
+        </article>
+        <article id="10" class="cat-info beda">
+          <div class="description-container">
+            <img src="images/cats_images/beda.jpg" alt="Cat Beda">
+            <div class="short-description">
+              <h2 class="cat-name">
+                <a href="#10">
+                  Беда
+                </a>
+              </h2>
+              <p>
+                1,3 года<br>
+                Мау?<br>
+                Ищет хозяина
+              </p>
+            </div>
+          </div>
+          <p class="full-description">
+            Имя говорит за себя.<br>
+            Помогите ей выбраться из утиного плена!
+          </p>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <address class="email">
+        <span>
+          Напишите нам:
+        </span>
+        <a href="">
+          cats@babuli.ru
+        </a>
+        <a href="">
+          vnuchek@babuli.ru
+        </a>
+      </address>
+      <address class="company">
+        ©2018 ООО "<a href="">Бабушкины котятки</a>"
+      </address>
+    </footer>
+  </body>
+</html>

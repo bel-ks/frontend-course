@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>04-murpassport</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <script type="text/javascript" src="./simulation.js"> </script>
+    <header class="passport-header" role="banner">
+      <h1 class="passport-header__title">
+        Мурпаспорт
+      </h1>
+    </header>
+    <aside class="menu">
+      <h2 class="menu__title">
+        МЕНЮ
+      </h2>
+      <nav class="menu__navigation">
+        <ul class="menu__list" role="menubar">
+          <li class="menu__point" role="menuitem">
+            <a class="menu__link" href="#data">
+              Данные
+            </a>
+          </li>
+          <li class="menu__point" role="menuitem">
+            <a class="menu__link" href="#vaccine">
+              Прививки
+            </a>
+          </li>
+          <li class="menu__point" role="menuitem">
+            <a class="menu__link" href="#gallery">
+              Галерея
+            </a>
+          </li>
+          <li class="menu__point" role="menuitem">
+            <a class="menu__link" href="#back">
+              Обратная связь
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main role="main">
+      <section class="passport-point cat-data">
+        <h3 class="cat-data__title" id="data">
+          ДАННЫЕ
+        </h3>
+        <img class="cat-data__photo" src="images/beda.jpg" alt="Photo of a cat" role="img">
+        <p class="cat-data__info">
+          Имя: Беда
+        </p>
+        <p class="cat-data__info">
+          Фамилия: отсутствует
+        </p>
+        <p class="cat-data__info">
+          Порода: Мау?
+        </p>
+        <p class="cat-data__info">
+          Дата рождения: 17.01.2016
+        </p>
+      </section>
+      <section class="passport-point cat-vaccine">
+        <h3 class="cat-vaccine__title" id="vaccine">
+          ПРИВИВКИ
+        </h3>
+        <ol class="cat-vaccine__list">
+          <li class="cat-vaccine__list-point">
+            От нелюбви к людям
+          </li>
+          <li class="cat-vaccine__list-point">
+            От 33 несчастий
+          </li>
+          <li class="cat-vaccine__list-point">
+            От аллергии на уточек
+          </li>
+        </ol>
+      </section>
+      <section class="passport-point cat-gallery">
+        <h3 class="cat-gallery__title" id="gallery">
+          ГАЛЕРЕЯ
+        </h3>
+        <div class="cat-gallery__gallery">
+          <img class="cat-gallery__photo"
+               src="images/donuts.jpg"
+               alt="Cat with donuts"
+               role="img"
+          >
+          <img class="cat-gallery__photo"
+               src="images/for_insta.jpg"
+               alt="Photo of cat with filter"
+               role="img"
+          >
+          <img class="cat-gallery__photo"
+               src="images/another_point.png"
+               alt="Another side of cat"
+               role="img"
+          >
+          <img class="cat-gallery__photo"
+               src="images/not_only_ducks.jpg"
+               alt="Cat with whales"
+               role="img"
+          >
+        </div>
+      </section>
+      <section class="passport-point back">
+        <h3 class="back__title" id="back">
+          ОБРАТНАЯ СВЯЗЬ
+        </h3>
+        <input class="back__input-comment" type="text" id="comment" placeholder="Ваш комментарий">
+        <label class="back__comment" for="comment">
+        </label>
+        <input class="back__input-email" type="email" id="email" placeholder="e-mail">
+        <label class="back__email" for="email">
+        </label>
+        <input class="back__submit-button" type="submit" id="submit" value="ОТПРАВИТЬ">
+      </section>
+    </main>
+    <footer class="passport-footer" role="contentinfo">
+      <address class="passport-footer__email">
+        e-mail: "<a href="">support@murpassport.ru</a>"
+      </address>
+      <address class="passport-footer__company">
+        ©2019 ООО "<a href="">Мурпаспорт</a>"
+      </address>
+    </footer>
+  </body>
+</html>
